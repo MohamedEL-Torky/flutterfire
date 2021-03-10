@@ -48,7 +48,6 @@ public class FlutterFirebaseMessagingReceiver extends BroadcastReceiver {
         new Intent(context, FlutterFirebaseMessagingBackgroundService.class);
     onBackgroundMessageIntent.putExtra(
         FlutterFirebaseMessagingUtils.EXTRA_REMOTE_MESSAGE, remoteMessage);
-    FlutterFirebaseMessagingBackgroundService.enqueueMessageProcessing(
-        context, onBackgroundMessageIntent);
+    LocalBroadcastManager.getInstance(context).sendBroadcast(onBackgroundMessageIntent);
   }
 }
