@@ -44,9 +44,9 @@ public class FlutterFirebaseMessagingReceiver extends BroadcastReceiver {
     //  |-> ---------------------
     //    App in Background/Quit
     //   ------------------------
-    Intent onBackgroundMessageIntent =
-        new Intent(context, FlutterFirebaseMessagingBackgroundService.class);
-    FlutterFirebaseMessagingBackgroundService.enqueueMessageProcessing(
-        context, onBackgroundMessageIntent);
+//    Intent onBackgroundMessageIntent =
+//        new Intent(context, FlutterFirebaseMessagingBackgroundService.class);
+//    FlutterFirebaseMessagingBackgroundService.enqueueMessageProcessing(
+//        context, onBackgroundMessageIntent);
   }
 }
